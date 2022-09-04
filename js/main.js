@@ -1,12 +1,23 @@
 const commander = document.getElementById("commander");
 const output = document.getElementById("output");
 
+function addLine(text) {
+    p = document.createElement("p");
+    p.append(text);
+    output.appendChild(p);
+}
+
 function whoami() {
-    console.log("I'm Daniru");
+    addLine("I'm Daniru");
+}
+
+function clear() {
+    output.innerHTML = "";
 }
 
 const commands = {
     whoami: whoami,
+    clear: clear,
 };
 
 function commandEnter(e) {
@@ -14,8 +25,9 @@ function commandEnter(e) {
         cmdFunc = commands[commander.value];
         if (cmdFunc) {
             cmdFunc();
+        } else if (!(commander.value === "")) {
+            addLine("fuck u");
         }
-        console.log(commander.value);
         commander.value = "";
     }
 }
