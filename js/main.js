@@ -31,10 +31,16 @@ function commandEnter(e) {
     if (e.key === "Enter") {
         cmdFunc = commands[commander.value];
         if (cmdFunc) {
+            addLine(`$ ${commander.value}`);
             cmdFunc();
-        } else if (!(commander.value === "")) {
-            addLine("fuck u");
+        } else if (commander.value === "") {
+            addLine("$");
+        } else {
+            addLine(`$ ${commander.value}`);
+            addLine(`Error`);
         }
+        window.scrollTo(0, document.body.scrollHeight);
+
         commander.value = "";
     }
 }

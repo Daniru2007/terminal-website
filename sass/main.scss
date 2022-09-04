@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+}
+
+output > * {
+    font-size: 16px;
+}
+
+#commander {
+    font-size: 16px;
+    border: none;
+    width: 90%;
+    &:focus {
+        outline: none;
+    }
+}
