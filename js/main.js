@@ -11,6 +11,12 @@ function whoami() {
     addLine("I'm Daniru");
 }
 
+function help() {
+    addLine("help - get all the list of commands");
+    addLine("clear - clear the screen");
+    addLine("whoami - details about me");
+}
+
 function clear() {
     output.innerHTML = "";
 }
@@ -18,6 +24,7 @@ function clear() {
 const commands = {
     whoami: whoami,
     clear: clear,
+    help: help,
 };
 
 function commandEnter(e) {
