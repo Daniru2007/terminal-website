@@ -12,31 +12,56 @@ function whoami() {
 }
 
 function help() {
-    addLine("help - get all the list of commands");
-    addLine("clear - clear the screen");
-    addLine("whoami - details about me");
+    addLine("help - all the list of last wishes");
+    addLine("clear - clear the hell");
+    addLine("whoami - details about the devil");
+    addLine("bloodfetch - wanna see some blood?");
 }
 
 function clear() {
     output.innerHTML = "";
+}
+function bloodfetch() {
+    pre = document.createElement("pre");
+    center = document.createElement("center");
+    string = [
+        "\n",
+        "▓█████▄  ▄▄▄       █     █░\n",
+        "▒██▀ ██▌▒████▄    ▓█░ █ ░█░\n",
+        "░██   █▌▒██  ▀█▄  ▒█░ █ ░█ \n",
+        "░▓█▄   ▌░██▄▄▄▄██ ░█░ █ ░█ \n",
+        "░▒████▓  ▓█   ▓██▒░░██▒██▓ \n",
+        " ▒▒▓  ▒  ▒▒   ▓▒█░░ ▓░▒ ▒  \n",
+        " ░ ▒  ▒   ▒   ▒▒ ░  ▒ ░ ░  \n",
+        " ░ ░  ░   ░   ▒     ░   ░  \n",
+        "   ░          ░  ░    ░    \n",
+        " ░                        \n",
+    ];
+    for (i = 0; i < string.length; i++) {
+        pre.append(string[i]);
+    }
+    pre.classList.add("ascii");
+    center.appendChild(pre);
+    output.appendChild(center);
 }
 
 const commands = {
     whoami: whoami,
     clear: clear,
     help: help,
+    bloodfetch: bloodfetch,
 };
 
 function commandEnter(e) {
     if (e.key === "Enter") {
         cmdFunc = commands[commander.value];
         if (cmdFunc) {
-            addLine(`$ ${commander.value}`);
+            addLine(`devil@hell~$ ${commander.value}`);
             cmdFunc();
         } else if (commander.value === "") {
-            addLine("$");
+            addLine("devil@hell~$");
         } else {
-            addLine(`$ ${commander.value}`);
+            addLine(`devil@hell~$ ${commander.value}`);
             addLine(`Error`);
         }
         window.scrollTo(0, document.body.scrollHeight);

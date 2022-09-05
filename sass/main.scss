@@ -3,6 +3,10 @@
     padding: 0px;
     background-color: black;
     color: white;
+
+    &::selection {
+        background-color: rgba(255, 0, 0, 0.171);
+    }
 }
 
 output > * {
@@ -17,8 +21,15 @@ output > * {
     font-size: 16px;
     border: none;
     width: 90%;
-    caret-color: aqua;
+    caret-color: rgb(255, 0, 0);
     &:focus {
         outline: none;
     }
+}
+
+.ascii {
+    font-size: 20px;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(46, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
