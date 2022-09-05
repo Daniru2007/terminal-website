@@ -14,8 +14,22 @@ body {
     margin: 10px;
 }
 
-output > * {
+.output > * {
     font-size: 16px;
+}
+
+.loadit {
+    animation: load 0.5s ease-in-out forwards;
+    opacity: 0%;
+}
+
+@keyframes load {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 
 a {
@@ -23,6 +37,7 @@ a {
     transition: all 0.5s;
 }
 a:hover {
+    cursor: pointer;
     text-shadow: 0px 0px 10px rgb(255, 0, 0);
     text-decoration: underline;
 }
