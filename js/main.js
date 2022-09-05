@@ -1,6 +1,5 @@
 const commander = document.getElementById("commander");
 const output = document.getElementById("output");
-const cursor = document.getElementById("cursor");
 
 function addLine(text) {
     p = document.createElement("p");
