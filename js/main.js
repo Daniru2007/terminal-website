@@ -15,7 +15,20 @@ function addBreak() {
 }
 
 function whoami() {
-    addLine("I'm Daniru");
+    addBreak();
+    addLine(
+        "I'm from Sri Lanka and I'm 15. Glad to say that I'm a self taught developer (no degree == no job 😂)."
+    );
+    addBreak();
+    addLine(
+        "I have about 3 years of experience (sitting in front of the computer 😅) doing full stack web development 🕸️, 2D game development 🎮 & AI programming 🤖 (have somewhat knowledge about AI modules like tensorflow)"
+    );
+
+    addBreak();
+    addLine(
+        "btw you can find me on GitHub (Follow me ❣️) doing some random projects and contributing to some great projects."
+    );
+    addBreak();
 }
 
 function sleep(ms) {
