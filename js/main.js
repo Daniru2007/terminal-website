@@ -10,6 +10,10 @@ function addLine(text, noAni = false) {
     output.appendChild(p);
 }
 
+function addBreak() {
+    output.appendChild(document.createElement("br"));
+}
+
 function whoami() {
     addLine("I'm Daniru");
 }
@@ -19,6 +23,7 @@ function sleep(ms) {
 }
 
 async function help() {
+    addBreak();
     addLine("help - all the list of last wishes");
     await sleep(100);
     addLine("clear - clear the hell");
@@ -32,6 +37,7 @@ async function help() {
     addLine("ls - list of projects");
     await sleep(100);
     addLine("contact - calling devil is illegal!");
+    addBreak();
 }
 
 function clear() {
@@ -81,6 +87,7 @@ function addLink(text, desc, link) {
 }
 
 async function ls() {
+    addBreak();
     addLink(
         "portfolio.html",
         "My Portfolio",
@@ -128,6 +135,7 @@ async function ls() {
         "My DotFiles",
         "https://github.com/Daniru2007/DotFiles"
     );
+    addBreak();
 }
 
 function contact() {

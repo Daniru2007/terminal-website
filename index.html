@@ -7,6 +7,10 @@
         <title>Terminal Hell</title>
         <script src="js/main.js" defer></script>
         <link rel="stylesheet" href="css/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu"
+            rel="stylesheet"
+        />
     </head>
     <body onkeypress="document.getElementById('commander').focus()">
         <div id="output">
@@ -35,7 +39,12 @@
         </div>
         <div class="commandBox">
             devil@hell~$
-            <input id="commander" onkeypress="commandEnter(event)" autofocus />
+            <input
+                id="commander"
+                onkeypress="commandEnter(event)"
+                autocomplete="off"
+                autofocus
+            />
         </div>
         <div style="padding: 2%"></div>
     </body>

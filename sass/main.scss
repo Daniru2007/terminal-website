@@ -2,7 +2,8 @@
     margin: 0px;
     padding: 0px;
     background-color: rgb(17, 0, 0);
-    color: rgb(172, 0, 0);
+    color: rgb(255, 2, 2);
+    font-family: "Ubuntu";
     cursor: default;
 
     &::selection {
@@ -57,6 +58,7 @@ a:hover {
 }
 
 .ascii {
+    font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(46, 0, 0));
     -webkit-background-clip: text;
